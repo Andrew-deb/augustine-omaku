@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-neatgreen: #66D37E;
+  --font-oxygen: "Oxygen", sans-serif;
+  --font-source: "Source Sans Pro", sans-serif;
+}
+
+body {
+  @apply font-oxygen text-gray-700 bg-white dark:text-gray-300 dark:bg-gray-900 transition-colors duration-300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-source;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out both;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in 0.9s ease-out 0.5s both;
+}
+
+.animate-fade-in-late {
+  animation: fade-in 0.8s ease-out 0.9s both;
+}
+
+.animate-slide-up-delayed {
+  animation: slide-up 0.9s ease-out 0.5s both;
+}

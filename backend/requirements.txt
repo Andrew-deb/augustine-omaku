@@ -1,0 +1,32 @@
+# Core framework
+fastapi[all]
+uvicorn[standard]
+
+# Database
+sqlalchemy
+asyncpg
+alembic
+
+# Configuration & validation
+pydantic
+pydantic-settings
+python-dotenv
+email-validator
+
+# HTTP client (YouTube API, ImageKit uploads)
+httpx
+
+# Email (SendGrid)
+sendgrid
+
+# File uploads
+python-multipart
+
+# Rate limiting
+slowapi
+
+# Auth (JWT decoding for Supabase tokens)
+python-jose[cryptography]
+
+# Excel export
+openpyxl
